@@ -1,9 +1,11 @@
-import "./App.css";
-import React from "react";
-import GrandParent from "./components/UseMemo/GrandParent";
+import ParentComponent from "./components/UseCallback/ParentComponent";
 
 function App() {
-  return <GrandParent />;
+  return (
+    <div>
+      <ParentComponent />
+    </div>
+  );
 }
 
 export default App;
