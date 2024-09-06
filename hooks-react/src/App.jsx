@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import Parent from "./components/ContextCustom/Parent";
+import Sample from "./components/UseReducer/Sample";
 
 function App() {
   return (
     <div>
-      <Parent />
+      <Sample />
     </div>
   );
 }

@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 function withLoading(WrappedComponent) {
-  return  function withLoadingComponent(props) {
-    const [loading, setLoading] = useState(false)
-
+  return function (props) {
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(true)
-        }, 2000)
-    })
-    if (!loading) {
-        return(
-            <div>
-                <h3>Loading...</h3>
-            </div>
-        )
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    });
+    if (loading) {
+      return <h2>Loading...</h2>;
     }
-    return (
-        <div>
-            <WrappedComponent {...props} />
-        </div>
-    )
-  }
+    return <WrappedComponent {...props} />;
+  };
 }
 
-export default withLoading
+export default withLoading;

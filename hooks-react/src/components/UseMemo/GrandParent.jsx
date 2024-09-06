@@ -9,7 +9,7 @@ function grandParent() {
   };
   // if we pass this object as props it will re- render the whole component
   // because the comparison of two object will always return false
-  // sp for this type of cases we can use the useMemo()
+  // so for this type of cases we can use the useMemo()
   const newUser = useMemo(() => {
     return {
       name: "Angela",
