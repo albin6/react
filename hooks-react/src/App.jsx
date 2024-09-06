@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import CounterTwo from "./components/UseReducer/CounterTwo";
+import Parent from "./components/ContextCustom/Parent";
 
 function App() {
   return (
     <div>
-      <CounterTwo />
+      <Parent />
     </div>
   );
 }
