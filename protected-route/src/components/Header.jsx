@@ -15,11 +15,11 @@ function Header() {
       <Link to={"/"}>Home</Link>&nbsp;&nbsp;&nbsp;
       <Link to={"/about"}>About</Link>&nbsp;&nbsp;&nbsp;
       <Link to={"/contact"}>Contact</Link>&nbsp;&nbsp;&nbsp;
+      <Link to={"/profile"}>Profile</Link>&nbsp;&nbsp;&nbsp;
       {!auth.user ? (
         <Link to={"/login"}>Login</Link>
       ) : (
         <>
-          <Link to={"/profile"}>Profile</Link>&nbsp;&nbsp;&nbsp;
           <button onClick={logoutUser}>logout</button>
         </>
       )}
